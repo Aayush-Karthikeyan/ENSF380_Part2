@@ -13,6 +13,8 @@ public class SmartHomeBuilder {
         // Student to implement
         // Add the device to the devices list
         // Return this for method chaining (an example is given in Lesson 24, 04_Builder)
+        devices.add(device);
+        return this;
     }
     
     // TODO: Implement build functionality
@@ -25,5 +27,11 @@ public class SmartHomeBuilder {
         // Check if devices list is empty
         // If empty, throw new IllegalStateException("No devices registered. Add at least one device before building.")
         // Otherwise, create and return a new SmartHome(devices)
+        if (devices.isEmpty()) {
+            throw new IllegalStateException("No devices registered. Add at least one device before building");
+        }
+        else {
+            return new SmartHome(devices);
+        }
     }
 }

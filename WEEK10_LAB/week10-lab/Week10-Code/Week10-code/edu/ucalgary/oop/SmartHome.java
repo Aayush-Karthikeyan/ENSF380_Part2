@@ -9,12 +9,12 @@ public class SmartHome {
     // Constructor should NOT be public - only SmartHomeBuilder should create instances
     // Should initialize the devices field with the provided list
     // Consider making a defensive copy of the list to prevent external modification
+
     SmartHome(List<SmartDevice<?>> devices) {
         // Student to implement
         // Initialize this.devices with the provided devices list
         // Consider: this.devices = new ArrayList<>(devices);
-
-        this.devices = devices;
+        this.devices = new  ArrayList<>(devices);
 
     }
     
